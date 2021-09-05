@@ -1,8 +1,9 @@
 /// <reference types="Cypress" />
+import { baseUrl } from '../../../src/constants/index'
 
 describe('Welcome Page Test Suite', () => {
 	it('My Test case', () => {
-		cy.visit('http://localhost:3000/')
+		cy.visit(baseUrl)
 
 		//radio buttons
 		cy.get('[data-test="min-size-radio"]').check().should('be.checked')

@@ -1,10 +1,12 @@
 /// <reference types="Cypress" />
-
+import {
+	successMessage,
+	unsuccessMessage,
+	baseUrl,
+} from '../../../src/constants/index'
 describe('Welcome Page Test Suite', () => {
 	it('My Test case', () => {
-		const successMessage = 'Successfully Generated Image'
-		const unsuccessMessage = 'Successfully Generated Image'
-		cy.visit('http://localhost:3000/my-test/colour-board/1024')
+		cy.visit(baseUrl + 'my-test/colour-board/1024')
 
 		cy.get('[data-test="canvas-board"]').should('have.css', 'width', '1024px')
 		cy.get('[data-test="canvas-board"]').should('have.css', 'height', '512px')
