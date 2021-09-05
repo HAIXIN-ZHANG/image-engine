@@ -1,4 +1,5 @@
 {
+	"extends": "./tsconfig-base.json",
 	"compilerOptions": {
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
@@ -14,8 +15,7 @@
 		"resolveJsonModule": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
-		"types": ["cypress", "jest", "node"],
-		"isolatedModules": false
+		"types": ["cypress", "jest", "node"]
 	},
 	"include": ["src", "**/*.ts"]
 }
