@@ -5,6 +5,7 @@ import { withRouter, RouteComponentProps } from 'react-router-dom'
 import { Spin, Button, Alert } from 'antd'
 import { fakeApi } from '../utils/fakeAPIcall'
 import { toNumber } from 'lodash'
+import { unsuccessMessage, successMessage } from '../constants/index'
 
 const StyledColourBoardWrapper = styled.div``
 const StyledHeaderWrapper = styled.div`
@@ -170,7 +171,7 @@ class ColourBoard extends React.Component<RouteComponentProps, IState> {
 						(this.state.isError ? (
 							<StyledAlert
 								data-test="error-alert"
-								message="Error: Api call failed"
+								message={unsuccessMessage}
 								type="error"
 								closable
 								afterClose={() => {
@@ -180,7 +181,7 @@ class ColourBoard extends React.Component<RouteComponentProps, IState> {
 						) : (
 							<StyledAlert
 								data-test="success-alert"
-								message="Successfully Generated Image"
+								message={successMessage}
 								type="success"
 								closable
 								afterClose={() => {
