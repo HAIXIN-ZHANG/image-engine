@@ -8,7 +8,7 @@ const StyledHeaderWrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	height: 34px;
-	margin: 10px 0;
+	margin: 150px 0 10px 0;
 	font-size: 28px;
 `
 const StyledWrapper = styled.div`
@@ -40,13 +40,21 @@ function WelcomePage(props: RouteComponentProps) {
 			</StyledWrapper>
 			<StyledWrapper>
 				<Radio.Group onChange={onChange} value={size}>
-					<Radio value={256}>Min size</Radio>
-					<Radio value={512}>Mid size</Radio>
-					<Radio value={1024}>Large size</Radio>
+					<Radio data-test="min-size-radio" value={256}>
+						Min size
+					</Radio>
+					<Radio data-test="mid-size-radio" value={512}>
+						Mid size
+					</Radio>
+					<Radio data-test="large-size-radio" value={1024}>
+						Large size
+					</Radio>
 				</Radio.Group>
 			</StyledWrapper>
 			<StyledWrapper>
-				<Button onClick={openColourBoard}>Conform</Button>
+				<Button data-test="confirm-button" onClick={openColourBoard}>
+					Conform
+				</Button>
 			</StyledWrapper>
 		</div>
 	)

@@ -134,16 +134,24 @@ class ColourBoard extends React.Component<RouteComponentProps, IState> {
 							ref={this.canvas}
 							isLoading={this.state.isLoading}
 							canvasWidth={this.state.canvasWidth}
+							data-test="canvas-board"
 						/>
 					</StyledCanvasWrapper>
-					<StyledButtonGroupWrapper>
-						<StyledButton onClick={() => this.onButtonClick(false, false)}>
+					<StyledButtonGroupWrapper data-test="button-group">
+						<StyledButton
+							data-test="clickable-button"
+							onClick={() => this.onButtonClick(false, false)}
+						>
 							Reset Image
 						</StyledButton>
-						<StyledButton onClick={() => this.onButtonClick(false, true)}>
+						<StyledButton
+							data-test="clickable-button"
+							onClick={() => this.onButtonClick(false, true)}
+						>
 							Generate Image Without an ApiCall
 						</StyledButton>
 						<StyledButton
+							data-test="clickable-button"
 							type={'primary'}
 							onClick={() => this.onButtonClick(true, true, false)}
 						>
@@ -152,6 +160,7 @@ class ColourBoard extends React.Component<RouteComponentProps, IState> {
 						<StyledButton
 							type={'primary'}
 							danger
+							data-test="clickable-button"
 							onClick={() => this.onButtonClick(true, true, true)}
 						>
 							Unsuccessfully Generate Image
@@ -160,6 +169,7 @@ class ColourBoard extends React.Component<RouteComponentProps, IState> {
 					{this.state.showToast &&
 						(this.state.isError ? (
 							<StyledAlert
+								data-test="error-alert"
 								message="Error: Api call failed"
 								type="error"
 								closable
@@ -169,6 +179,7 @@ class ColourBoard extends React.Component<RouteComponentProps, IState> {
 							/>
 						) : (
 							<StyledAlert
+								data-test="success-alert"
 								message="Successfully Generated Image"
 								type="success"
 								closable

@@ -13,8 +13,8 @@
 		"@types/styled-components": "^5.1.13",
 		"antd": "^4.16.13",
 		"lodash": "^4.17.20",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
+		"react": "^16.0.0",
+		"react-dom": "^16.0.0",
 		"react-router-dom": "^5.3.0",
 		"react-scripts": "4.0.3",
 		"styled-components": "^5.3.1",
@@ -24,8 +24,11 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"test:jest": "jest --watch",
+		"test:cypress:open": "node_modules/.bin/cypress open",
+		"test:cypress:run": "cypress run",
+		"test:cypress:run:chrome": "cypress run --browser chrome"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -46,7 +49,20 @@
 		]
 	},
 	"devDependencies": {
+		"@babel/core": "^7.15.5",
+		"@babel/preset-env": "^7.15.4",
+		"@babel/preset-typescript": "^7.15.0",
+		"@types/enzyme": "^3.10.9",
+		"@types/enzyme-adapter-react-16": "^1.0.6",
 		"@types/lodash": "^4.14.172",
-		"@types/react-router-dom": "^5.1.8"
+		"@types/react-router-dom": "^5.1.8",
+		"babel-jest": "^26.6.0",
+		"cypress": "^8.3.1",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.6",
+		"enzyme-to-json": "^3.6.2",
+		"jest": "26.6.0",
+		"jest-enzyme": "^7.1.2",
+		"ts-jest": "^26.0.5"
 	}
 }
