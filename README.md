@@ -25,6 +25,7 @@ Launches jest in the interactive watch mode.\
 
 ### `yarn test:cypress:open`
 
+Before run cypress, please make sure you start this React app in localhost:3000.\
 Launches cypress dashboard.\
 
 ### `yarn test:cypress:run`
